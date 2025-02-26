@@ -14,6 +14,7 @@ public class SwaggerConfig {
                 .info(new Info()
                         .title("API de Contatos")
                         .version("1.0.0")
-                        .description("Documentação da API para o desafio de contatos"));
+                        .description("Documentação da API para o desafio de contatos"))
+                .openapi("3.0.1");
     }
 }
