@@ -22,6 +22,8 @@ services:
     depends_on:
       - database
     environment:
+      SPRING_DOC_API_DOCS_PATH: /api-docs
+      SPRING_DOC_SWAGGER_UI_PATH: /swagger-ui.html
       SPRING_DATASOURCE_URL: jdbc:postgresql://database:5432/l2test
       SPRING_DATASOURCE_USERNAME: postgres
       SPRING_DATASOURCE_PASSWORD: 123456

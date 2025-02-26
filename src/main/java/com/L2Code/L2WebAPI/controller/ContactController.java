@@ -3,11 +3,12 @@ import com.L2Code.L2WebAPI.model.Contact;
 import com.L2Code.L2WebAPI.service.ContactService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
+import io.swagger.v3.oas.annotations.tags.Tag;
 import java.util.List;
 
 @RestController
-@RequestMapping("/contacts")
+@RequestMapping("api/contacts")
+@Tag(name = "Contatos", description = "API para gerenciar contatos")
 public class ContactController {
     private final ContactService contactService;
 
