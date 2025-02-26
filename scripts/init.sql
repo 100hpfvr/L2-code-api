@@ -1,0 +1,1 @@
+CREATE SCHEMA l2test;

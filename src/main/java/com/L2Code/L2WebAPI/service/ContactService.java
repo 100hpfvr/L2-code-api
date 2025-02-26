@@ -1,11 +1,12 @@
 package com.L2Code.L2WebAPI.service;
 import com.L2Code.L2WebAPI.model.Contact;
 import com.L2Code.L2WebAPI.repository.ContactRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
-
+@Service
 public class ContactService {
     private final ContactRepository contactRepository;
 

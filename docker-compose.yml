@@ -7,12 +7,13 @@ services:
     restart: always
     environment:
       POSTGRES_DB: l2test
-      POSTGRES_USER: admin
-      POSTGRES_PASSWORD: admin
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123456
     ports:
       - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
+      - ./scripts/init.sql:/docker-entrypoint-initdb.d/init.sql
 
   backend:
     build: .
@@ -22,8 +23,8 @@ services:
       - database
     environment:
       SPRING_DATASOURCE_URL: jdbc:postgresql://database:5432/l2test
-      SPRING_DATASOURCE_USERNAME: admin
-      SPRING_DATASOURCE_PASSWORD: admin
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: 123456
     ports:
       - "8080:8080"
 

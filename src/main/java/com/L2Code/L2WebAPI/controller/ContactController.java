@@ -6,8 +6,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@RestController
+@RequestMapping("/contacts")
 public class ContactController {
-
     private final ContactService contactService;
 
     public ContactController(ContactService contactService) {
@@ -34,5 +35,4 @@ public class ContactController {
         contactService.inactivate(id);
         return ResponseEntity.noContent().build();
     }
-
 }
