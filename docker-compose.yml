@@ -21,7 +21,7 @@ services:
     depends_on:
       - database
     environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://database:5432/desafio
+      SPRING_DATASOURCE_URL: jdbc:postgresql://database:5432/l2test
       SPRING_DATASOURCE_USERNAME: admin
       SPRING_DATASOURCE_PASSWORD: admin
     ports:
