@@ -19,7 +19,7 @@ public class ContactService {
         if (existente.isPresent()) {
             throw new RuntimeException("Número de celular já cadastrado!");
         }
-        return contactRepository.save(contact);
+        return contactRepository.saveAndFlush(contact);
     }
 
     public List<Contact> list() {
@@ -35,7 +35,7 @@ public class ContactService {
         contact.setTelefone(updatedContact.getTelefone());
         contact.setFavorito(updatedContact.getFavorito());
 
-        return contactRepository.save(contact);
+        return contactRepository.saveAndFlush(contact);
     }
 
     public void inactivate(Long id) {
