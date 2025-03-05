@@ -1,9 +1,11 @@
 package com.L2Code.L2WebAPI.controller;
+
 import com.L2Code.L2WebAPI.model.Contact;
 import com.L2Code.L2WebAPI.service.ContactService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import io.swagger.v3.oas.annotations.tags.Tag;
+
 import java.util.List;
 
 @RestController
@@ -23,7 +25,9 @@ public class ContactController {
 
     @GetMapping
     public ResponseEntity<List<Contact>> list() {
-        return ResponseEntity.ok(contactService.list());
+
+        return ResponseEntity.ok(contactService.list()
+        );
     }
 
     @PutMapping("/{id}")
