@@ -26,8 +26,8 @@ public class ContactService {
         return contactRepository.findAll();
     }
 
-    public Contact update(Long id, Contact updatedContact) {
-        Contact contact = contactRepository.findById(id)
+    public Contact update(Contact updatedContact) {
+        Contact contact = contactRepository.findById(updatedContact.getId())
                 .orElseThrow(() -> new RuntimeException("Contato não encontrado"));
 
         contact.setNome(updatedContact.getNome());

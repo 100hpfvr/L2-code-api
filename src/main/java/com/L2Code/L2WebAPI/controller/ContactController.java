@@ -30,9 +30,9 @@ public class ContactController {
         );
     }
 
-    @PutMapping("/{id}")
-    public ResponseEntity<Contact> update(@PathVariable Long id, @RequestBody Contact contact) {
-        return ResponseEntity.ok(contactService.update(id, contact));
+    @PutMapping
+    public ResponseEntity<Contact> update(@RequestBody Contact contact) {
+        return ResponseEntity.ok(contactService.update(contact));
     }
 
     @DeleteMapping("/{id}")
